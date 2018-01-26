@@ -1,0 +1,72 @@
+@media screen and (min-width: 768px) {
+    #main-wrapper {
+        min-width: 1140px;
+        margin: 0 auto;
+    }
+
+    #steps-row-lg {
+        display: block !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #steps-row-sm {
+        display: block !important;
+    }
+}
+
+#steps-row-lg, #steps-row-sm {
+    display: none;
+}
+
+.row {
+    margin-bottom: 15px;
+}
+
+/*<editor-fold desc="Step display for large screen-width">*/
+.btn-step-lg {
+    width: 20%;
+    border-radius: 0px;
+}
+
+.btn-step-lg:first-child {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.btn-step-lg:not(:first-child):not(:last-child) {
+    border-right: none;
+}
+
+.btn-step-lg:last-child {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+/*</editor-fold>*/
+
+.item {
+    position: relative;
+    display: block;
+    height: 100%;
+    padding-top: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.item h1 {
+    text-align: center;
+}
+
+.item-thumbnail {
+    background-color: #333;
+    height: 200px;
+    width: 100%;
+}
+
+.btn-item {
+    margin: 10px 0px;
+}
+
+.item ul {
+    text-align: left;
+}
