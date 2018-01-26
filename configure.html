@@ -5,10 +5,10 @@
 
     <title>Peter's Computers - Desktop Configurator</title>
 
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css" />
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
 
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
@@ -16,106 +16,118 @@
     <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row main-row">
-            <div id="main-wrapper" class="col-md-6 col-lg-6 col-sm-12 col-12">
-                <!-- Header row -->
-                <div id="header-row" class="row">
-                    <div class="col-12">
-                        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-                            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                                    data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <a class="navbar-brand" href="#">PC Configurator</a>
-                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                                <div class="navbar-nav">
-                                    <a class="nav-item nav-link" href="#">Peter's Computers</a>
-                                    <a class="nav-item nav-link" href="#">Laptop Refurbished</a>
-                                    <a class="nav-item nav-link" href="#">Contact</a>
-                                </div>
+<div class="container-fluid">
+    <div class="row main-row">
+        <div id="main-wrapper" class="col-md-6 col-lg-6 col-sm-12 col-12">
+            <!-- Header row -->
+            <div id="header-row" class="row">
+                <div class="col-12 mb-3">
+                    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                                data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">PC Configurator</a>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-item nav-link" href="#">Peter's Computers</a>
+                                <a class="nav-item nav-link" href="#">Laptop Refurbished</a>
+                                <a class="nav-item nav-link" href="#">Contact</a>
                             </div>
-                        </nav>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Steps row -->
+            <div id="steps-row-lg" class="row">
+                <div class="col">
+                    <div class="input-group">
+                        <button type="button" class="btn-step-lg btn btn-primary">Size</button>
+                        <button type="button" class="btn-step-lg btn btn-outline-primary">Chipset</button>
+                        <button type="button" class="btn-step-lg btn btn-outline-primary">Componenten</button>
+                        <button type="button" class="btn-step-lg btn btn-outline-primary">Accessoires</button>
+                        <button type="button" class="btn-step-lg btn btn-outline-primary">Winkelmandje</button>
                     </div>
                 </div>
+            </div>
+            <div id="steps-row-sm" class="row">
+                <div class="col">
+                    <div class="dropdown show">
+                        <a class="btn btn-primary btn-block dropdown-toggle" href="#" role="button"
+                           id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Kies stap
+                        </a>
 
-                <!-- Steps row -->
-                <div id="steps-row-lg" class="row">
-                    <div class="col">
-                        <div class="input-group">
-                            <button type="button" class="btn-step-lg btn btn-primary">Size</button>
-                            <button type="button" class="btn-step-lg btn btn-outline-primary">Chipset</button>
-                            <button type="button" class="btn-step-lg btn btn-outline-primary">Componenten</button>
-                            <button type="button" class="btn-step-lg btn btn-outline-primary">Accessoires</button>
-                            <button type="button" class="btn-step-lg btn btn-outline-primary">Winkelmandje</button>
+                        <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">Size</a>
+                            <a class="dropdown-item" href="#">Chipset</a>
+                            <a class="dropdown-item" href="#">Componenten</a>
+                            <a class="dropdown-item" href="#">Accessoires</a>
+                            <a class="dropdown-item" href="#">Winkelmandje</a>
                         </div>
                     </div>
                 </div>
-                <div id="steps-row-sm" class="row">
-                    <div class="col">
-                        <div class="dropdown show">
-                            <a class="btn btn-primary btn-block dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Kies stap
-                            </a>
+            </div>
 
-                            <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="#">Size</a>
-                                <a class="dropdown-item" href="#">Chipset</a>
-                                <a class="dropdown-item" href="#">Componenten</a>
-                                <a class="dropdown-item" href="#">Accessoires</a>
-                                <a class="dropdown-item" href="#">Winkelmandje</a>
+            <!-- Content row -->
+            <div id="content-row" class="row">
+                <div id="content-step-1" class="col-12">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-4 pt-3">
+                            <div class="item col">
+                                <h1>Klein</h1>
+                                <img class="item-thumbnail d-block mb-3"
+                                     src="https://origincdn.azureedge.net/cdn/gaming/desktops/Chronos/img/main-blk.png">
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="size" id="1" autocomplete="off"
+                                           class="btn-item btn-lg btn btn-block btn-outline-primary mb-3">Selecteer</input>
+                                </label>
+                                <p class="item-description d-block">Voor mensen die van compact houden</p>
+                                <ul>
+                                    <li>Compact</li>
+                                    <li>Zuiniger</li>
+                                    <li>Veel power</li>
+                                    <li>Budget PC</li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Content row -->
-                <div id="content-row" class="row">
-                    <div id="content-step-1" class="col-12 col-sm-12 col-md-12 col-xl-12">
-                        <div class="row">
-                            <div class="col-12 col-sm-6 col-md-4 col-xl-4 h-100">
-                                <div class="item col">
-                                    <h1>Klein</h1>
-                                    <img class="item-thumbnail mb-3" src="">
-                                    <p class="item-description d-block h-25">Voor mensen die van compact houden</p>
-                                    <ul>
-                                        <li>Compact</li>
-                                        <li>Zuiniger</li>
-                                        <li>Veel power</li>
-                                        <li>Budget PC</li>
-                                    </ul>
-                                    <button class="btn-item btn-lg btn btn-block btn-outline-primary mb-3">Selecteer</button>
-                                </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-4 pt-3">
+                            <div class="item col">
+                                <h1>Middel</h1>
+                                <img class="item-thumbnail d-block mb-3"
+                                     src="http://www.corsair.com/~/media/corsair/product-images/cases/spec-04/large/spec-04_red_01.png">
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="size" id="2" autocomplete="off"
+                                           class="btn-item btn-lg btn btn-block btn-outline-primary mb-3">Selecteer</input>
+                                </label>
+                                <p class="item-description d-block">Voor de gemiddelde gamer fanatics</p>
+                                <ul>
+                                    <li>Compact</li>
+                                    <li>Zuiniger</li>
+                                    <li>Veel power</li>
+                                    <li>Budget PC</li>
+                                </ul>
                             </div>
-                            <div class="col-12 col-sm-6 col-md-4 col-xl-4 h-100">
-                                <div class="item col">
-                                    <h1>Middel</h1>
-                                    <img class="item-thumbnail mb-3" src="">
-                                    <p class="item-description d-block h-25">Voor de gemiddelde gamer fanatics</p>
-                                    <ul>
-                                        <li>Compact</li>
-                                        <li>Zuiniger</li>
-                                        <li>Veel power</li>
-                                        <li>Budget PC</li>
-                                    </ul>
-                                    <button class="btn-item btn-lg btn btn-block btn-outline-primary mb-3">Selecteer</button>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 col-xl-4 h-100">
-                                <div class="item col">
-                                    <h1>Groot</h1>
-                                    <img class="item-thumbnail mb-3" src="">
-                                    <p class="item-description d-block h-25">Voor de mensen die van beestachtige
-                                        machines houden</p>
-                                    <ul>
-                                        <li>Compact</li>
-                                        <li>Zuiniger</li>
-                                        <li>Veel power</li>
-                                        <li>Budget PC</li>
-                                    </ul>
-                                    <button class="btn-item btn-lg btn btn-block btn-outline-primary mb-3">Selecteer</button>
-                                </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-4 pt-3">
+                            <div class="item col">
+                                <h1>Groot</h1>
+                                <img class="item-thumbnail d-block mb-3"
+                                     src="https://www.nzxt.com/uploads/product_image/image/356/large_df14d562082ca45b.png">
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="size" id="3" autocomplete="off"
+                                           class="btn-item btn-lg btn btn-block btn-outline-primary mb-3">Selecteer</input>
+                                </label>
+                                <p class="item-description d-block">Voor de mensen die van beestachtige
+                                    machines houden</p>
+                                <ul>
+                                    <li>Compact</li>
+                                    <li>Zuiniger</li>
+                                    <li>Veel power</li>
+                                    <li>Budget PC</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -123,5 +135,6 @@
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>
