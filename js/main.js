@@ -98,6 +98,9 @@ $(function() {
     })
     $(".step-select-button").click(function() {
         let step = this.getAttribute("step-button");
-        setStepButton(step);
+        if (data.step) {
+            if (data.step != step)
+                setStepButton(step);
+        }
     });
 });
