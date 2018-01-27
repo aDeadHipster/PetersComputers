@@ -24,6 +24,8 @@ function updatePageFromCookie() {
 
     if (data.step)
         setStepButton(data.step);
+    else
+        setStepButton(1);
 
     if (data.chipset) {
         let chipset_select_button = $("button.chipset-select-button[chipset=" + data.chipset + "]");
