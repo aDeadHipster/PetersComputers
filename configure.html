@@ -13,7 +13,8 @@
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/cookie.js"></script>
 </head>
 <body>
 <div class="container-fluid">
@@ -21,7 +22,7 @@
         <div id="main-wrapper" class="col-md-6 col-lg-6 col-sm-12 col-12">
             <!-- Header row -->
             <div id="header-row" class="row">
-                <div class="col-12 mb-3">
+                <div class="col-12">
                     <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
                         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                                 data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
@@ -44,11 +45,11 @@
             <div id="steps-row-lg" class="row">
                 <div class="col">
                     <div class="input-group">
-                        <button type="button" class="btn-step-lg btn btn-primary">Size</button>
-                        <button type="button" class="btn-step-lg btn btn-outline-primary">Chipset</button>
-                        <button type="button" class="btn-step-lg btn btn-outline-primary">Componenten</button>
-                        <button type="button" class="btn-step-lg btn btn-outline-primary">Accessoires</button>
-                        <button type="button" class="btn-step-lg btn btn-outline-primary">Winkelmandje</button>
+                        <button type="button" step-button="1" class="step-select-button btn-step-lg btn btn-outline-primary">Behuizinggrootte</button>
+                        <button type="button" step-button="2" class="step-select-button btn-step-lg btn btn-outline-primary">Chipset</button>
+                        <button type="button" step-button="3" class="step-select-button btn-step-lg btn btn-outline-primary">Componenten</button>
+                        <button type="button" step-button="4" class="step-select-button btn-step-lg btn btn-outline-primary">Accessoires</button>
+                        <button type="button" step-button="5" class="step-select-button btn-step-lg btn btn-outline-primary">Winkelmandje</button>
                     </div>
                 </div>
             </div>
@@ -61,11 +62,11 @@
                         </a>
 
                         <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="#">Size</a>
-                            <a class="dropdown-item" href="#">Chipset</a>
-                            <a class="dropdown-item" href="#">Componenten</a>
-                            <a class="dropdown-item" href="#">Accessoires</a>
-                            <a class="dropdown-item" href="#">Winkelmandje</a>
+                            <a class="step-select-button dropdown-item" step-button="1" href="#">Size</a>
+                            <a class="step-select-button dropdown-item" step-button="2" href="#">Chipset</a>
+                            <a class="step-select-button dropdown-item" step-button="3" href="#">Componenten</a>
+                            <a class="step-select-button dropdown-item" step-button="4" href="#">Accessoires</a>
+                            <a class="step-select-button dropdown-item" step-button="5" href="#">Winkelmandje</a>
                         </div>
                     </div>
                 </div>
@@ -73,61 +74,280 @@
 
             <!-- Content row -->
             <div id="content-row" class="row">
-                <div id="content-step-1" class="col-12">
+                <div step-div="1" class="step-div col-12">
                     <div class="row">
-                        <div class="col-12 col-sm-6 col-md-4 col-xl-4 pt-3">
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-4">
                             <div class="item col">
                                 <h1>Klein</h1>
-                                <img class="item-thumbnail d-block mb-3"
+                                <img class="item-thumbnail-h200 d-block mt-5 mb-5"
                                      src="https://origincdn.azureedge.net/cdn/gaming/desktops/Chronos/img/main-blk.png">
-                                <label class="btn btn-primary">
-                                    <input type="radio" name="size" id="1" autocomplete="off"
-                                           class="btn-item btn-lg btn btn-block btn-outline-primary mb-3">Selecteer</input>
-                                </label>
-                                <p class="item-description d-block">Voor mensen die van compact houden</p>
+                                <button size="1" class="size-select-button mb-3 btn btn-lg btn-block btn-outline-primary">Selecteer</button>
+                                <p class="item-description d-block">Voor mensen die van compact houden, maar toch
+                                    willen genieten van de nieuwste games op hoge kwaliteit</p>
                                 <ul>
                                     <li>Compact</li>
-                                    <li>Zuiniger</li>
                                     <li>Veel power</li>
-                                    <li>Budget PC</li>
+                                    <li>Voordeel 3</li>
+                                    <li>Voordeel 4</li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-xl-4 pt-3">
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-4">
                             <div class="item col">
                                 <h1>Middel</h1>
-                                <img class="item-thumbnail d-block mb-3"
+                                <img class="item-thumbnail-h200 d-block mt-5 mb-5"
                                      src="http://www.corsair.com/~/media/corsair/product-images/cases/spec-04/large/spec-04_red_01.png">
-                                <label class="btn btn-primary">
-                                    <input type="radio" name="size" id="2" autocomplete="off"
-                                           class="btn-item btn-lg btn btn-block btn-outline-primary mb-3">Selecteer</input>
-                                </label>
-                                <p class="item-description d-block">Voor de gemiddelde gamer fanatics</p>
+                                <button size="2" class="size-select-button mb-3 btn btn-lg btn-block btn-outline-primary">Selecteer</button>
+                                <p class="item-description d-block">Voor de gemiddelde gamer fanatics die elke game
+                                    wil kunnen spelen</p>
                                 <ul>
-                                    <li>Compact</li>
-                                    <li>Zuiniger</li>
-                                    <li>Veel power</li>
-                                    <li>Budget PC</li>
+                                    <li>Super kracht</li>
+                                    <li>Voordeel 2</li>
+                                    <li>Voordeel 3</li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-xl-4 pt-3">
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-4">
                             <div class="item col">
                                 <h1>Groot</h1>
-                                <img class="item-thumbnail d-block mb-3"
+                                <img class="item-thumbnail-h200 d-block mt-5 mb-5"
                                      src="https://www.nzxt.com/uploads/product_image/image/356/large_df14d562082ca45b.png">
-                                <label class="btn btn-primary">
-                                    <input type="radio" name="size" id="3" autocomplete="off"
-                                           class="btn-item btn-lg btn btn-block btn-outline-primary mb-3">Selecteer</input>
-                                </label>
+                                <button size="3" class="size-select-button mb-3 btn btn-lg btn-block btn-outline-primary">Selecteer</button>
                                 <p class="item-description d-block">Voor de mensen die van beestachtige
-                                    machines houden</p>
+                                    machines houden en op de hoogste kwaliteit willen spelen</p>
                                 <ul>
-                                    <li>Compact</li>
-                                    <li>Zuiniger</li>
-                                    <li>Veel power</li>
-                                    <li>Budget PC</li>
+                                    <li>Extreme kracht</li>
+                                    <li>Voordeel 2</li>
+                                    <li>Voordeel 3</li>
                                 </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div step-div="2" class="step-div col-12">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-3 col-xl-3">
+                            <div class="item col">
+                                <h1>Intel</h1>
+                                <h4>Z370</h4>
+                                <img class="item-thumbnail-w100 d-block mt-2 mb-3"
+                                     src="https://origincdn.azureedge.net/images/kits/icons/image_a7b757f5-b531-4620-93d3-ddeb4f2aff66.png">
+                                <button chipset="intelz370" class="chipset-select-button mb-3 btn btn-lg btn-block btn-outline-primary">Selecteer</button>
+                                <h6 class="text-center">Gaming</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="text-center">Multitasking</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="text-center">Video</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="text-center">Photography</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="text-center">Audio</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <br>
+                                <table class="table table-sm table-bordered">
+                                    <tr>
+                                        <th>Codename</th>
+                                        <td>Coffee Lake-S</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Freq. default</th>
+                                        <td>3.6GHz - 4.2GHz</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Freq. overclocked</th>
+                                        <td><span style="color: var(--success)">4.3GHz - 5.0GHz</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Thermal Design Power</th>
+                                        <td>95 Watts</td>
+                                    </tr>
+                                    <tr>
+                                        <th>L2 Cache</th>
+                                        <td>6 x 256KB</td>
+                                    </tr>
+                                    <tr>
+                                        <th>L3 Cache</th>
+                                        <td>12MB</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3 col-xl-3">
+                            <div class="item col">
+                                <h1>Intel</h1>
+                                <h4>X299</h4>
+                                <img class="item-thumbnail-w100 d-block mt-2 mb-3"
+                                     src="https://origincdn.azureedge.net/images/kits/icons/image_9b75cc5d-0384-49d1-8c6e-7972e23cbc14.png">
+                                <button chipset="intelx299" class="chipset-select-button mb-3 btn btn-lg btn-block btn-outline-primary">Selecteer</button>
+                                <h6 class="text-center">Gaming</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="text-center">Multitasking</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="text-center">Video</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="text-center">Photography</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="text-center">Audio</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <br>
+                                <table class="table table-sm table-bordered">
+                                    <tr>
+                                        <th>Codename</th>
+                                        <td>Skylake-E</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Freq. default</th>
+                                        <td>2.6GHz - 4.3GHz</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Freq. overclocked</th>
+                                        <td><span style="color: var(--success)">3.9GHz - 4.8GHz</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Thermal Design Power</th>
+                                        <td>165 Watts</td>
+                                    </tr>
+                                    <tr>
+                                        <th>L2 Cache</th>
+                                        <td>18 x 1MB</td>
+                                    </tr>
+                                    <tr>
+                                        <th>L3 Cache</th>
+                                        <td>24.75MB</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3 col-xl-3">
+                            <div class="item col">
+                                <h1>AMD</h1>
+                                <h4>8350/X370</h4>
+                                <img class="item-thumbnail-w100 d-block mt-2 mb-3"
+                                     src="https://origincdn.azureedge.net/images/kits/icons/image_709d2372-91c1-49f4-922a-a7cfc6d9c443.png">
+                                <button chipset="amd8350/x370" class="chipset-select-button mb-3 btn btn-lg btn-block btn-outline-primary">Selecteer</button>
+                                <h6 class="text-center">Gaming</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="text-center">Multitasking</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="text-center">Video</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="text-center">Photography</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="text-center">Audio</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <br>
+                                <table class="table table-sm table-bordered">
+                                    <tr>
+                                        <th>Codename</th>
+                                        <td>Ryzen</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Freq. default</th>
+                                        <td>3.0GHz - 3.6GHz</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Freq. overclocked</th>
+                                        <td><span style="color: var(--success)">3.7GHz - 4.0GHz</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Thermal Design Power</th>
+                                        <td>95 Watts</td>
+                                    </tr>
+                                    <tr>
+                                        <th>L2 Cache</th>
+                                        <td>4MB</td>
+                                    </tr>
+                                    <tr>
+                                        <th>L3 Cache</th>
+                                        <td>16MB</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3 col-xl-3">
+                            <div class="item col">
+                                <h1>AMD</h1>
+                                <h4>X399</h4>
+                                <img class="item-thumbnail-w100 d-block mt-2 mb-3"
+                                     src="https://origincdn.azureedge.net/images/kits/icons/image_1d4a1172-477d-4d51-8de4-883ed6e7eedf.png">
+                                <button chipset="amdx399" class="chipset-select-button mb-3 btn btn-lg btn-block btn-outline-primary">Selecteer</button>
+                                <h6 class="text-center">Gaming</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="text-center">Multitasking</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="text-center">Video</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="text-center">Photography</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="text-center">Audio</h6>
+                                <div class="progress chipset-progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <br>
+                                <table class="table table-sm table-bordered">
+                                    <tr>
+                                        <th>Codename</th>
+                                        <td>Threadripper</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Freq. default</th>
+                                        <td>3.4GHz - 4.0GHz</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Freq. overclocked</th>
+                                        <td><span style="color: var(--danger)">N/A</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Thermal Design Power</th>
+                                        <td>180 Watts</td>
+                                    </tr>
+                                    <tr>
+                                        <th>L2 Cache</th>
+                                        <td><span style="color: var(--danger)">N/A</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>L3 Cache</th>
+                                        <td>32MB</td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
                     </div>
